@@ -1,0 +1,71 @@
+
+
+## STEP 1: Neuronal Shape Check
+First check if the waveform shape is neuronal:
+
+Neuronal Shape Criteria:
+
+## Valid Extracellular Action Potential Shape
+
+A neuronal waveform must exhibit a standard extracellular spike morphology.
+
+### Shape Requirements (Neuronal Check)
+
+- **Phases:** Must be strictly biphasic or triphasic.
+  - Expected pattern: small initial positive deflection → sharp negative trough → single smooth return toward baseline.
+  - Invalid if the waveform shows >3 phases, extra bumps, secondary rises/falls, or multiple depolarization events.
+
+- **Depolarization (Negative Peak):**
+  - Should descend rapidly, forming a sharp and well-defined trough.
+  - Should not be overly broad in time (peak-to-trough typically < 0.5–0.6 ms).
+  - Should not contain pre-trough bumps or irregularities.
+
+- **Repolarization:**
+  - Should rise smoothly back toward baseline.
+  - Should not include slow drifting, oscillations, or a second hump after the main trough.
+
+- **Baseline Stability:**
+  - Beginning and end of the waveform should be centered around baseline (near zero).
+  - No large amplitude offsets or drift before or after the main spike.
+
+However, natural waveform variability, vertical spread, or broadness from large cluster size 
+does NOT count as baseline drift, DC offset, instability, or violation.
+Only true morphology violations (monophasic noise, >3 phases, slow drift, or non-spike shape, etc.) 
+should be treated as non-neuronal.
+Do NOT hallucinate baseline shift or drift when the baseline is centered around zero.
+Discard huge clusters (> 10000 spikes) with caution.
+
+
+If waveforms do NOT have valid neuronal shape → DISCARD.
+
+## STEP 2: Split Decision (only if neuronal)
+If waveforms ARE neuronal, check if cluster needs splitting:
+
+Split Criteria (check waveform overlay + ISI histogram):
+1. **Waveform Variability:** Do you see multiple distinct waveform families/shapes in the overlay?
+2. **Temporal Consistency:** Does the vertical spread (width) change significantly over time?
+3. **ISI Pattern:** Does the ISI histogram suggest multiple units (high refractory period violations, bimodal distribution)?
+4. **Aggregation Complexity:** Does the tree show many complex subclusters that might represent embedded units?
+
+Decision Logic:
+- NOT neuronal shape → DISCARD
+- Neuronal + high variability/drift/ISI violations visible → SPLIT (identify tight subgroups)
+- Neuronal + low variability + clean ISI pattern → KEEP
+
+You are judging Cluster 104 for spike sorting curation.
+
+Cluster Summary:
+- Spike count: 11873
+- Composed of 71 overclusters (hierarchical subcomponents)
+
+**Examine the provided images carefully:**
+- Waveform overlay: Look for shape consistency, spread, multiple families
+- ISI histogram: Look for refractory violations (spikes < 2ms), distribution pattern
+- Aggregation tree: Look for hierarchical structure complexity
+
+Output only in JSON schema:
+{
+  "action": "KEEP" | "DISCARD" | "SPLIT",
+  "rationale": "Brief explanation (2-3 sentences) based on visual observations",
+}
+Do not add any other text.

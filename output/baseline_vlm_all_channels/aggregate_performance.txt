@@ -1,0 +1,31 @@
+AGGREGATE PERFORMANCE ACROSS ALL CHANNELS
+============================================================
+
+Channels processed: 4
+Model: gpt-5.1
+Timestamp: 2025-12-01 00:22:28
+
+------------------------------------------------------------
+MEAN METRICS (Ground Truth Comparison)
+------------------------------------------------------------
+overall_precision: 0.2327 ± 0.0919
+overall_recall: 1.0000 ± 0.0000
+overall_f1_score: 0.3712 ± 0.1154
+
+------------------------------------------------------------
+MEAN METRICS (Quality Metrics)
+------------------------------------------------------------
+mean_firing_rate: 16.4545 ± 9.2964
+mean_isi_violations: 0.1449 ± 0.0785
+mean_presence_ratio: 0.9978 ± 0.0043
+mean_amplitude_cv: 0.2472 ± 0.0533
+mean_snr: 5.1150 ± 2.2201
+
+------------------------------------------------------------
+PER-CHANNEL SUMMARY
+------------------------------------------------------------
+channel  n_final_clusters  overall_precision  overall_recall  overall_f1_score  mean_firing_rate  mean_isi_violations  mean_presence_ratio  mean_amplitude_cv  mean_snr
+    CH3                 1             0.1552             1.0            0.2687         30.141765             0.244530             1.000000           0.309302  3.166262
+   CH20                 1             0.2234             1.0            0.3652         11.124938             0.160541             1.000000           0.259376  3.436412
+   CH30                 4             0.1883             1.0            0.3169         10.202320             0.116002             0.991329           0.239955  6.036436
+   CH31                 3             0.3641             1.0            0.5338         14.349151             0.058396             1.000000           0.180337  7.821057

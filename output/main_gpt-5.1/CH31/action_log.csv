@@ -1,0 +1,18 @@
+Action,Cluster IDs,Reason,Phase
+DISCARD,161,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,311,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,317,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,321,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,322,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,324,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,334,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,339,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,340,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,342,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,347,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,350,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,355,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,1,"VLM: The average waveform is essentially monophasic with a large DC offset, starting and ending far from the zero baseline rather than exhibiting a clear biphasic or triphasic spike centered on baseline. Because this violates the required extracellular neuronal spike morphology, the cluster is considered non-neuronal regardless of its ISI structure or subcluster composition.",Phase1_Iter1
+KEEP,13,"VLM: Waveforms show a clean, consistent biphasic extracellular spike with stable baseline and no extra phases, indicating clear neuronal morphology. Despite many overclusters, the waveform variability is modest and the ISI histogram has a strong refractory period with very low violation rate, consistent with a single well-isolated unit.",Phase1_Iter1
+KEEP,63,"VLM: Waveforms show a consistent, clean biphasic extracellular spike shape with stable baseline and no extra phases or irregular bumps, indicating a clear neuronal unit. Despite many overclusters, the waveform family is homogeneous and the ISI histogram has an excellent refractory period with very low violation rate (0.03%), so there is no strong evidence for multiple units that would require splitting.",Phase1_Iter1
+DISCARD,242,"VLM: The waveform does not exhibit a canonical extracellular spike shape: the negative trough is broad and slow, and the repolarization phase forms an extended positive hump without a smooth return to baseline by the end of the window. This morphology, together with the sustained offset, is more consistent with non-neuronal or population activity rather than isolated single-unit spikes, so the cluster should be discarded rather than split or kept.",Phase1_Iter1

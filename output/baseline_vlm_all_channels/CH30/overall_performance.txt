@@ -1,0 +1,14 @@
+OVERALL PERFORMANCE SUMMARY
+==================================================
+
+n_curated_clusters: 4
+n_matched_clusters: 2
+total_tp: 79644
+total_fp: 343287
+total_fn: 0
+overall_precision: 0.1883
+overall_recall: 1.0000
+overall_f1_score: 0.3169
+mean_precision: 0.2717
+mean_recall: 0.5000
+mean_f1_score: 0.2899

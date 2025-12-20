@@ -1,0 +1,60 @@
+
+
+## STEP 1: Neuronal Shape Check
+First check if the waveform shape is neuronal:
+
+Neuronal Shape Criteria:
+
+## Valid Extracellular Action Potential Shape
+
+A neuronal waveform must exhibit a clean extracellular spike morphology.
+
+### Shape Requirements (Neuronal Check)
+
+- **Phases:** Must be strictly biphasic or triphasic.
+  - Expected pattern: small initial positive deflection → sharp negative trough → single smooth return toward baseline.
+  - Invalid if the waveform shows >3 phases, extra bumps, secondary rises/falls, or multiple depolarization events.
+
+- **Depolarization (Negative Peak):**
+  - Should descend rapidly, forming a sharp and well-defined trough.
+  - Should not be overly broad in time (peak-to-trough typically < 0.5–0.6 ms).
+  - Should not contain pre-trough bumps or irregularities.
+
+- **Repolarization:**
+  - Should rise smoothly back toward baseline.
+  - Should not include slow drifting, oscillations, or a second hump after the main trough.
+
+- **Baseline Stability:**
+  - Beginning and end of the waveform should remain close to baseline (near zero).
+  - No large amplitude offsets or drift before or after the main spike.
+
+If any of these conditions are violated, the waveform is **not** considered neuronal.
+
+
+If waveforms do NOT have valid neuronal shape → DISCARD immediately.
+
+## STEP 2: Split Decision (only if neuronal)
+If waveforms ARE neuronal, check if cluster needs splitting:
+
+Split Criteria (check waveform overlay + ISI histogram):
+1. **Waveform Variability:** Do you see multiple distinct waveform families/shapes?
+2. **Temporal Consistency:** Does the vertical spread (width) change significantly over time?
+3. **ISI Pattern:** Does the ISI histogram suggest multiple units (high violations > 0.006, bimodal distribution)?
+4. **Aggregation Complexity:** Is this cluster composed of many complex subclusters?
+
+Decision Logic:
+- NOT neuronal shape → DISCARD
+- Neuronal + high variability/drift/ISI violations → SPLIT (identify tight subgroups)
+- Neuronal + low variability + clean ISI → KEEP
+
+You are judging Cluster 222 for spike sorting curation.
+
+Cluster Summary:
+- Spike count: 264
+- Composed of 1 overclusters (hierarchical subcomponents)
+
+Output JSON schema:
+{
+  "action": "KEEP" | "DISCARD" | "SPLIT",
+  "rationale": "Brief explanation (2-3 sentences)",
+}

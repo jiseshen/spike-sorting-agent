@@ -1,0 +1,64 @@
+
+## Decision Logic:
+
+**STEP 1: Check small cluster quality**
+- If small cluster (n < 1000) has excessive variability (too noisy/inconsistent) → DISCARD
+- If small cluster shape is not neuronal → DISCARD
+
+**STEP 2: Check similarity to large cluster (only if small cluster is valid)**
+- If waveforms looks similar AND merged ISI acceptable (< 0.006) → MERGE
+- If waveforms are dissimilar → Choose "NOT_MERGE"
+
+**STEP 3: Final decision**
+- If you choose "NOT_MERGE" for ALL large clusters → small cluster will be DISCARDED
+- So "NOT_MERGE" means: "These are different units, try other large clusters"
+- Only use actual "DISCARD" if small cluster itself is invalid (bad shape/too noisy)
+
+Neuronal Shape Criteria:
+
+## Valid Extracellular Action Potential Shape
+
+A neuronal waveform must exhibit a clean extracellular spike morphology.
+
+### Shape Requirements (Neuronal Check)
+
+- **Phases:** Must be strictly biphasic or triphasic.
+  - Expected pattern: small initial positive deflection → sharp negative trough → single smooth return toward baseline.
+  - Invalid if the waveform shows >3 phases, extra bumps, secondary rises/falls, or multiple depolarization events.
+
+- **Depolarization (Negative Peak):**
+  - Should descend rapidly, forming a sharp and well-defined trough.
+  - Should not be overly broad in time (peak-to-trough typically < 0.5–0.6 ms).
+  - Should not contain pre-trough bumps or irregularities.
+
+- **Repolarization:**
+  - Should rise smoothly back toward baseline.
+  - Should not include slow drifting, oscillations, or a second hump after the main trough.
+
+- **Baseline Stability:**
+  - Beginning and end of the waveform should remain close to baseline (near zero).
+  - No large amplitude offsets or drift before or after the main spike.
+
+If any of these conditions are violated, the waveform is **not** considered neuronal.
+
+
+You are deciding whether to MERGE small cluster 158 into large cluster 2.
+
+Small Cluster 158 (post-split result):
+- Spike count: 905
+- ISI violation rate: 0.55%
+
+Large Cluster 2 (independent valid unit):
+- Spike count: 24448 (large, standalone cluster)
+- ISI violation rate: 4.74%
+
+Merge Prediction:
+- Waveform correlation: 0.929
+- Merged ISI violation rate: 5.09%
+- Total spikes after merge: 25353
+
+Output JSON schema:
+{
+  "action": "MERGE" | "NOT_MERGE" | "DISCARD",
+  "rationale": "Brief explanation (2-3 sentences)"
+}

@@ -1,0 +1,31 @@
+AGGREGATE PERFORMANCE ACROSS ALL CHANNELS
+============================================================
+
+Channels processed: 4
+Model: human_curation
+Timestamp: 2025-12-01 00:45:12
+
+------------------------------------------------------------
+MEAN METRICS (Ground Truth Comparison)
+------------------------------------------------------------
+overall_precision: 1.0000 ± 0.0000
+overall_recall: 1.0000 ± 0.0000
+overall_f1_score: 1.0000 ± 0.0000
+
+------------------------------------------------------------
+MEAN METRICS (Quality Metrics)
+------------------------------------------------------------
+mean_firing_rate: 3.5568 ± 1.4500
+mean_isi_violations: 0.0031 ± 0.0013
+mean_presence_ratio: 1.0000 ± 0.0000
+mean_amplitude_cv: 0.1534 ± 0.0110
+mean_snr: 8.6979 ± 1.5359
+
+------------------------------------------------------------
+PER-CHANNEL SUMMARY
+------------------------------------------------------------
+channel  n_final_clusters  overall_precision  overall_recall  overall_f1_score  mean_firing_rate  mean_isi_violations  mean_presence_ratio  mean_amplitude_cv  mean_snr
+    CH3                 2                1.0             1.0               1.0          3.116826             0.004721                  1.0           0.153071  8.611672
+   CH20                 1                1.0             1.0               1.0          2.484993             0.003629                  1.0           0.153679  6.679701
+   CH30                 3                1.0             1.0               1.0          2.930288             0.002635                  1.0           0.166939  9.125059
+   CH31                 3                1.0             1.0               1.0          5.695237             0.001606                  1.0           0.139885 10.375250

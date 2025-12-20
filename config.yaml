@@ -1,0 +1,75 @@
+# Example configuration file for agentic spike sorting
+
+# Data Generation
+data:
+  duration: 120  # seconds
+  num_neurons: 15
+  probe: "Neuronexus-32"
+  seed: 42
+
+# Preprocessing
+preprocessing:
+  freq_min: 300.0  # Hz
+  freq_max: 6000.0  # Hz
+
+# Spike Sorting
+sorting:
+  sorter_name: "mountainsort5"
+  # MountainSort5 parameters
+  mountainsort5:
+    detect_threshold: 5.5
+    snippet_T1: 20
+    snippet_T2: 20
+  # Kilosort3 parameters (if using kilosort3)
+  kilosort3:
+    detect_threshold: 6
+    projection_threshold: [10, 4]
+
+# Waveform Extraction
+waveforms:
+  ms_before: 1.0
+  ms_after: 2.0
+  max_spikes_per_unit: 500
+
+# Quality Metrics
+metrics:
+  - firing_rate
+  - presence_ratio
+  - snr
+  - isi_violation
+  - amplitude_cutoff
+  - drift
+
+# VLM Configuration
+vlm:
+  model: "gpt-4o"
+  temperature: 0.3
+  max_tokens: 1000
+
+# Quality Criteria for VLM
+quality_criteria:
+  max_isi_violation_rate: 2.0  # percent
+  min_spike_count: 100
+  min_snr: 3.0
+  max_amplitude_variation_cv: 0.3
+
+# Curation
+curation:
+  max_iterations: 3
+  quality_threshold: 5.0
+  auto_remove: true
+  auto_merge: false  # More conservative - require manual approval
+  min_merge_similarity: 0.7
+
+# Evaluation
+evaluation:
+  delta_time: 0.4  # ms, time window for spike matching
+  min_accuracy: 0.8
+  exhaustive_gt: true
+
+# Output
+output:
+  base_dir: "./output"
+  save_figures: true
+  figure_format: "png"
+  figure_dpi: 150

@@ -1,0 +1,71 @@
+
+## Decision Logic:
+
+**STEP 1: Check small cluster quality**
+- If small cluster (n < 1000) has excessive variability (too broad/noisy) → DISCARD
+- If small cluster shape is not neuronal → DISCARD
+
+**STEP 2: Check similarity to large cluster (only if small cluster is valid)**
+- If waveforms look similar in shape AND merged ISI histogram shows acceptable refractory violations → MERGE
+- If waveforms are clearly dissimilar → Choose "NOT_MERGE"
+
+**STEP 3: Final decision**
+- If you choose "NOT_MERGE" for ALL large clusters → small cluster will be DISCARDED
+- So "NOT_MERGE" means: "These are different units, try other large clusters"
+- Only use actual "DISCARD" if small cluster itself is invalid (bad shape/too noisy)
+
+Neuronal Shape Criteria:
+
+## Valid Extracellular Action Potential Shape
+
+A neuronal waveform must exhibit a standard extracellular spike morphology.
+
+### Shape Requirements (Neuronal Check)
+
+- **Phases:** Must be strictly biphasic or triphasic.
+  - Expected pattern: small initial positive deflection → sharp negative trough → single smooth return toward baseline.
+  - Invalid if the waveform shows >3 phases, extra bumps, secondary rises/falls, or multiple depolarization events.
+
+- **Depolarization (Negative Peak):**
+  - Should descend rapidly, forming a sharp and well-defined trough.
+  - Should not be overly broad in time (peak-to-trough typically < 0.5–0.6 ms).
+  - Should not contain pre-trough bumps or irregularities.
+
+- **Repolarization:**
+  - Should rise smoothly back toward baseline.
+  - Should not include slow drifting, oscillations, or a second hump after the main trough.
+
+- **Baseline Stability:**
+  - Beginning and end of the waveform should be centered around baseline (near zero).
+  - No large amplitude offsets or drift before or after the main spike.
+
+However, natural waveform variability, vertical spread, or broadness from large cluster size 
+does NOT count as baseline drift, DC offset, instability, or violation.
+Only true morphology violations (monophasic noise, >3 phases, slow drift, or non-spike shape, etc.) 
+should be treated as non-neuronal.
+Do NOT hallucinate baseline shift or drift when the baseline is centered around zero.
+Discard huge clusters (> 10000 spikes) with caution.
+
+
+You are deciding whether to MERGE small cluster 253 into large cluster 4.
+
+Small Cluster 253 (post-split result):
+- Spike count: 123
+
+Large Cluster 4 (independent valid unit):
+- Spike count: 21388 (large, standalone cluster)
+
+Merge Prediction:
+- Total spikes after merge: 21511
+
+**Examine the provided images carefully:**
+- Small cluster waveforms: Check if valid neuronal shape, consistency
+- Large cluster waveforms: Compare shape, amplitude, temporal profile
+- Merged ISI histogram: Check if refractory violations remain acceptable after merge
+
+Output only in JSON schema:
+{
+  "action": "MERGE" | "NOT_MERGE" | "DISCARD",
+  "rationale": "Brief explanation (2-3 sentences) based on visual observations"
+}
+Do not add any other text.

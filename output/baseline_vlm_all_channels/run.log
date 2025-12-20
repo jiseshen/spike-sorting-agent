@@ -1,0 +1,348 @@
+HappyHappyHappy
+================================================================================
+BASELINE VLM PIPELINE - BATCH PROCESSING (PARALLEL)
+================================================================================
+Provider: gpt4o
+Model: gpt-5.1
+Channels: CH3, CH20, CH30, CH31
+Use mock: False
+Output directory: output/baseline_vlm_all_channels
+Parallel workers: 4 (one per channel)
+================================================================================
+
+🚀 Starting parallel processing of 4 channels...
+HappyHappyHappy
+
+================================================================================
+PROCESSING CH30
+================================================================================
+
+[1] Loading data/CH30_spikes.mat...
+  ✓ Loaded 430937 spikes
+  ✓ Sampling rate: 30000.0 Hz
+  ✓ Ground truth: 3 clusters
+
+[2] Initializing cluster manager...
+  ✓ Initial clusters: 18
+
+[3] Initializing baseline pipeline...
+  ✓ Baseline pipeline initialized
+
+[4] Running baseline pipeline...
+  🌐 Using REAL VLM API: gpt4o/gpt-5.1
+  ⚠ This will make API calls for neuronal validity checks!
+================================================================================
+BASELINE VLM-ASSISTED CURATION PIPELINE
+================================================================================
+
+[Phase 0] Automatic size filtering...
+  Discarded 11 clusters (< 500 spikes)
+  Remaining: 7 clusters
+
+[Phase 1] VLM neuronal validity + heuristic split...
+  Processing 7 clusters...
+
+  Cluster 1: 332472 spikes, 285 overclusters, ISI=25.96%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal), but ISI=25.96% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 31: 50821 spikes, 41 overclusters, ISI=0.03%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (186 chars)
+    → KEEP (VLM: neuronal, ISI=0.03%)
+
+  Cluster 211: 26939 spikes, 73 overclusters, ISI=12.01%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal), but ISI=12.01% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 305: 12699 spikes, 47 overclusters, ISI=8.38%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal), but ISI=8.38% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 353: 1588 spikes, 6 overclusters, ISI=0.69%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (227 chars)
+    → KEEP (VLM: neuronal), but ISI=0.69% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 413: 1286 spikes, 7 overclusters, ISI=2.49%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (227 chars)
+    → KEEP (VLM: neuronal), but ISI=2.49% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 443: 652 spikes, 4 overclusters, ISI=1.08%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (186 chars)
+    → KEEP (VLM: neuronal), but ISI=1.08% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+[Phase 2] Heuristic merge decisions...
+  3 small clusters, 4 large clusters
+
+  Cluster 353: 1588 spikes, ISI violation=0.69%
+    Best match: Cluster 211, corr=0.664, merged_isi=12.53%
+    → DISCARD (cannot merge)
+
+  Cluster 413: 1286 spikes, ISI violation=2.49%
+    Best match: Cluster 211, corr=0.819, merged_isi=13.52%
+    → DISCARD (cannot merge)
+
+  Cluster 443: 652 spikes, ISI violation=1.08%
+    Best match: Cluster 211, corr=0.898, merged_isi=12.37%
+    → DISCARD (cannot merge)
+
+[Phase 3] Final size filter (< 5000 spikes)...
+  Discarded 0 clusters (< 5000 spikes)
+  Final: 4 clusters
+
+[Action Log] Saved to output/baseline_vlm_all_channels/CH30/baseline_pipeline_actions.csv
+
+[Pipeline Complete] 4 final clusters
+
+  ✓ Pipeline complete: 4 final clusters
+  ⏱ Pipeline execution time: 31.1s (0.5min)
+  ⏱ Total time (including I/O): 31.8s (0.5min)
+
+[5] Saving results to output/baseline_vlm_all_channels/CH30...
+  ✓ Results saved
+  ⏱ Skipping evaluation (run aggregate_results.py later)
+
+✓ CH30 complete!
+HappyHappyHappy
+
+================================================================================
+PROCESSING CH20
+================================================================================
+
+[1] Loading data/CH20_spikes.mat...
+  ✓ Loaded 84283 spikes
+  ✓ Sampling rate: 30000.0 Hz
+  ✓ Ground truth: 1 clusters
+
+[2] Initializing cluster manager...
+  ✓ Initial clusters: 12
+
+[3] Initializing baseline pipeline...
+  ✓ Baseline pipeline initialized
+
+[4] Running baseline pipeline...
+  🌐 Using REAL VLM API: gpt4o/gpt-5.1
+  ⚠ This will make API calls for neuronal validity checks!
+================================================================================
+BASELINE VLM-ASSISTED CURATION PIPELINE
+================================================================================
+
+[Phase 0] Automatic size filtering...
+  Discarded 11 clusters (< 500 spikes)
+  Remaining: 1 clusters
+
+[Phase 1] VLM neuronal validity + heuristic split...
+  Processing 1 clusters...
+
+  Cluster 1: 82665 spikes, 184 overclusters, ISI=16.06%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal), but ISI=16.06% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+[Phase 2] Heuristic merge decisions...
+  0 small clusters, 1 large clusters
+
+[Phase 3] Final size filter (< 5000 spikes)...
+  Discarded 0 clusters (< 5000 spikes)
+  Final: 1 clusters
+
+[Action Log] Saved to output/baseline_vlm_all_channels/CH20/baseline_pipeline_actions.csv
+
+[Pipeline Complete] 1 final clusters
+
+  ✓ Pipeline complete: 1 final clusters
+  ⏱ Pipeline execution time: 5.5s (0.1min)
+  ⏱ Total time (including I/O): 5.6s (0.1min)
+
+[5] Saving results to output/baseline_vlm_all_channels/CH20...
+  ✓ Results saved
+  ⏱ Skipping evaluation (run aggregate_results.py later)
+
+✓ CH20 complete!
+HappyHappyHappy
+
+================================================================================
+PROCESSING CH3
+================================================================================
+
+[1] Loading data/CH3_spikes.mat...
+  ✓ Loaded 94743 spikes
+  ✓ Sampling rate: 30000.0 Hz
+  ✓ Ground truth: 2 clusters
+
+[2] Initializing cluster manager...
+  ✓ Initial clusters: 25
+
+[3] Initializing baseline pipeline...
+  ✓ Baseline pipeline initialized
+
+[4] Running baseline pipeline...
+  🌐 Using REAL VLM API: gpt4o/gpt-5.1
+  ⚠ This will make API calls for neuronal validity checks!
+================================================================================
+BASELINE VLM-ASSISTED CURATION PIPELINE
+================================================================================
+
+[Phase 0] Automatic size filtering...
+  Discarded 22 clusters (< 500 spikes)
+  Remaining: 3 clusters
+
+[Phase 1] VLM neuronal validity + heuristic split...
+  Processing 3 clusters...
+
+  Cluster 1: 88796 spikes, 266 overclusters, ISI=24.45%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal), but ISI=24.45% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 218: 658 spikes, 6 overclusters, ISI=0.76%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (226 chars)
+    → KEEP (VLM: neuronal), but ISI=0.76% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 222: 2889 spikes, 30 overclusters, ISI=9.11%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal), but ISI=9.11% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+[Phase 2] Heuristic merge decisions...
+  2 small clusters, 1 large clusters
+
+  Cluster 218: 658 spikes, ISI violation=0.76%
+    Best match: Cluster 1, corr=0.588, merged_isi=24.95%
+    → DISCARD (cannot merge)
+
+  Cluster 222: 2889 spikes, ISI violation=9.11%
+    Best match: Cluster 1, corr=0.782, merged_isi=26.53%
+    → DISCARD (cannot merge)
+
+[Phase 3] Final size filter (< 5000 spikes)...
+  Discarded 0 clusters (< 5000 spikes)
+  Final: 1 clusters
+
+[Action Log] Saved to output/baseline_vlm_all_channels/CH3/baseline_pipeline_actions.csv
+
+[Pipeline Complete] 1 final clusters
+
+  ✓ Pipeline complete: 1 final clusters
+  ⏱ Pipeline execution time: 12.1s (0.2min)
+  ⏱ Total time (including I/O): 12.3s (0.2min)
+
+[5] Saving results to output/baseline_vlm_all_channels/CH3...
+  ✓ Results saved
+  ⏱ Skipping evaluation (run aggregate_results.py later)
+
+✓ CH3 complete!
+HappyHappyHappy
+
+================================================================================
+PROCESSING CH31
+================================================================================
+
+[1] Loading data/CH31_spikes.mat...
+  ✓ Loaded 133091 spikes
+  ✓ Sampling rate: 30000.0 Hz
+  ✓ Ground truth: 3 clusters
+
+[2] Initializing cluster manager...
+  ✓ Initial clusters: 17
+
+[3] Initializing baseline pipeline...
+  ✓ Baseline pipeline initialized
+
+[4] Running baseline pipeline...
+  🌐 Using REAL VLM API: gpt4o/gpt-5.1
+  ⚠ This will make API calls for neuronal validity checks!
+================================================================================
+BASELINE VLM-ASSISTED CURATION PIPELINE
+================================================================================
+
+[Phase 0] Automatic size filtering...
+  Discarded 13 clusters (< 500 spikes)
+  Remaining: 4 clusters
+
+[Phase 1] VLM neuronal validity + heuristic split...
+  Processing 4 clusters...
+
+  Cluster 1: 69850 spikes, 141 overclusters, ISI=17.39%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal), but ISI=17.39% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+  Cluster 13: 18065 spikes, 42 overclusters, ISI=0.08%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal, ISI=0.08%)
+
+  Cluster 63: 38899 spikes, 125 overclusters, ISI=0.03%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (217 chars)
+    → KEEP (VLM: neuronal, ISI=0.03%)
+
+  Cluster 242: 3146 spikes, 24 overclusters, ISI=9.57%
+[VLM API] Calling gpt4o/gpt-4o (temp=0.0) with 2 images...
+[VLM API] Response received (227 chars)
+    → KEEP (VLM: neuronal), but ISI=9.57% > 0.5% → heuristic split
+      Cannot split: no merge history
+
+[Phase 2] Heuristic merge decisions...
+  1 small clusters, 3 large clusters
+
+  Cluster 242: 3146 spikes, ISI violation=9.57%
+    Best match: Cluster 1, corr=0.844, merged_isi=20.09%
+    → DISCARD (cannot merge)
+
+[Phase 3] Final size filter (< 5000 spikes)...
+  Discarded 0 clusters (< 5000 spikes)
+  Final: 3 clusters
+
+[Action Log] Saved to output/baseline_vlm_all_channels/CH31/baseline_pipeline_actions.csv
+
+[Pipeline Complete] 3 final clusters
+
+  ✓ Pipeline complete: 3 final clusters
+  ⏱ Pipeline execution time: 16.1s (0.3min)
+  ⏱ Total time (including I/O): 16.3s (0.3min)
+
+[5] Saving results to output/baseline_vlm_all_channels/CH31...
+  ✓ Results saved
+  ⏱ Skipping evaluation (run aggregate_results.py later)
+
+✓ CH31 complete!
+
+⏱ Total parallel processing time: 32.5s (0.5min)
+
+--------------------------------------------------------------------------------
+AGGREGATION SKIPPED
+--------------------------------------------------------------------------------
+Run `uv run aggregate_results.py` to compute cross-channel summaries when desired.
+
+Channel summary (counts only):
+  CH3: initial=25 final=1 time=12.3s
+  CH20: initial=12 final=1 time=5.6s
+  CH30: initial=18 final=4 time=31.8s
+  CH31: initial=17 final=3 time=16.3s
+
+================================================================================
+BASELINE PIPELINE COMPLETE
+================================================================================
+Results saved to: /Users/jiseshen/Documents/Code/SpikeSorting/output/baseline_vlm_all_channels
+Next: aggregate with `uv run aggregate_results.py` if needed.
+================================================================================

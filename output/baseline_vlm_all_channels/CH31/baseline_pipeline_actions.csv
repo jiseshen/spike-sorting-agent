@@ -1,0 +1,17 @@
+phase,cluster_id,action,rationale
+Phase0_AutoFilter,161,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,311,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,317,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,321,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,322,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,324,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,334,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,339,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,340,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,342,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,347,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,350,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,355,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase1_VLM_Neuronal,13,KEEP,"VLM: Neuronal. The waveform exhibits a clear biphasic shape with a sharp negative trough and smooth return to baseline, meeting the criteria for a valid neuronal action potential.. ISI=0.08%"
+Phase1_VLM_Neuronal,63,KEEP,"VLM: Neuronal. The waveform exhibits a clear biphasic shape with a sharp negative trough and smooth return to baseline, meeting the criteria for a valid neuronal action potential.. ISI=0.03%"
+Phase2_Heuristic_Merge,242,DISCARD,Cannot merge: corr=0.844 (<0.3) or merged_isi=20.09% (>0.5%)

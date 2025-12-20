@@ -1,0 +1,27 @@
+Loading CH3 data...
+Loaded: 25 units, Fs=30000.0 Hz
+Warning: Using dummy waveforms (metadata mismatch)
+Arrays: spike_times=88796, assigns=88796, overclusters=88796, waveforms=(88796, 82)
+
+======================================================================
+VLM-INTEGRATED CURATION PIPELINE
+======================================================================
+
+======================================================================
+PHASE 0: AUTOMATIC SIZE FILTERING
+======================================================================
+✓ Phase 0 complete: 0 discarded, 1 kept
+
+======================================================================
+PHASE 1A: RULE-BASED SHAPE ASSESSMENT
+======================================================================
+Traceback (most recent call last):
+  File "/Users/jiseshen/Documents/Code/SpikeSorting/test_vlm_pipeline.py", line 132, in <module>
+    test_vlm_pipeline_ch3()
+  File "/Users/jiseshen/Documents/Code/SpikeSorting/test_vlm_pipeline.py", line 102, in test_vlm_pipeline_ch3
+    final_ids = pipeline.run_full_pipeline()
+  File "/Users/jiseshen/Documents/Code/SpikeSorting/src/vlm_curation_pipeline.py", line 445, in run_full_pipeline
+    valid_ids, _ = self.run_phase1a_shape_assessment(kept_ids)
+  File "/Users/jiseshen/Documents/Code/SpikeSorting/src/vlm_curation_pipeline.py", line 129, in run_phase1a_shape_assessment
+    waveforms = self.manager.get_waveforms(cid)
+AttributeError: 'ClusterManager' object has no attribute 'get_waveforms'. Did you mean: 'waveforms'?

@@ -1,0 +1,2 @@
+curated_id,matched_gt_id,agreement,n_curated_spikes,n_gt_spikes,tp,fp,fn,precision,recall,f1_score
+1,1,1.0,18465,18465,18465,0,0,1.0,1.0,1.0

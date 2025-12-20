@@ -1,0 +1,20 @@
+Action,Cluster IDs,Reason,Phase
+DISCARD,161,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,311,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,317,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,321,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,322,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,324,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,334,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,339,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,340,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,342,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,347,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,350,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+DISCARD,355,Event count is too low for individual clusters at end of hierarchical merging.,Phase0
+SPLIT,1,"VLM: The waveform overlay shows a clear, predominantly biphasic/triphasic extracellular spike shape, so the cluster is neuronal, but there is substantial vertical spread suggesting multiple waveform families. The ISI histogram shows heavy refractory period violations (~17%), consistent with multiple units being merged. The hierarchical aggregation tree is complex with many overclusters, further indicating that this cluster likely contains several separable units that should be split. | last-merge split",Phase1_Iter1
+DISCARD,1,"VLM: The waveform overlay shows a largely monophasic, very broad negative deflection with sustained non-zero offsets before and after the trough, rather than a clean biphasic/triphasic spike returning to baseline. This violates the required extracellular action potential morphology and baseline stability, so the cluster is considered non-neuronal regardless of ISI or clustering structure.",Phase1_Iter2
+DISCARD,86,"VLM: Waveforms are dominated by a broad, slow, monophasic-like deflection without a sharp negative trough or clear biphasic/triphasic structure, and the baseline is not stable at the beginning and end. This morphology is inconsistent with a standard extracellular action potential and instead suggests non-spike noise or LFP contamination, so the cluster should be discarded.",Phase1_Iter2
+KEEP,13,"VLM: Waveforms are clearly neuronal with a consistent biphasic shape, sharp negative trough, and smooth repolarization without extra phases. The ISI histogram shows very low refractory period violations (0.08%) and no strong evidence of multiple units, and while the tree is moderately complex, there is no clear indication of distinct waveform families that would require splitting.",Phase1_Iter1
+KEEP,63,"VLM: Waveforms show a consistent, clean biphasic/triphasic extracellular spike with sharp negative troughs and smooth repolarization, and baseline is stable without extra phases. The ISI histogram has a clear refractory gap with very low violation rate (0.03%), suggesting a single well-isolated unit. Although the aggregation tree is complex, the waveform family appears homogeneous, so no further splitting is warranted.",Phase1_Iter1
+DISCARD,242,"VLM: The waveform overlay shows a very broad, smooth U-shaped deflection with no sharp, fast negative trough or small initial positive phase, and peak-to-trough duration far exceeding typical extracellular spikes. This morphology is more consistent with slow or artifact-like activity than a standard biphasic/triphasic neuronal action potential. Because the basic neuronal shape criteria are not met, the cluster should be discarded.",Phase1_Iter1

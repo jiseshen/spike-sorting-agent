@@ -1,0 +1,30 @@
+Loading CH3 data...
+Loaded: 25 units, Fs=30000.0 Hz
+Warning: Using dummy waveforms (metadata mismatch)
+Arrays: spike_times=88796, assigns=88796, overclusters=88796, waveforms=(88796, 82)
+
+======================================================================
+VLM-INTEGRATED CURATION PIPELINE
+======================================================================
+
+======================================================================
+PHASE 0: AUTOMATIC SIZE FILTERING
+======================================================================
+✓ Phase 0 complete: 0 discarded, 1 kept
+
+======================================================================
+PHASE 1A: RULE-BASED SHAPE ASSESSMENT
+======================================================================
+[Phase1A] DISCARD [1]: Invalid shape: Too many phases (48 > 3), Slow descent to negative extrema (1.400 ms)
+✓ Phase 1A complete: 0 valid, 1 invalid
+
+✓ All clusters filtered out in Phase 1A
+
+✓ Action log saved to output/vlm_pipeline_actions_CH3.csv
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+Final clusters: []
+
+✓ Action log saved: output/vlm_pipeline_actions_CH3.csv

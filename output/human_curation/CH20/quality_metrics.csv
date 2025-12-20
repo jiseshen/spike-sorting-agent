@@ -1,0 +1,2 @@
+cluster_id,n_spikes,firing_rate,isi_violations_rate,isi_violations_count,presence_ratio,amplitude_median,amplitude_cv,amplitude_cutoff,snr
+1,18465,2.4849933340765955,0.003628682842287695,67,1.0,56.8683730191367,0.15367877875922162,0.42642837801245614,6.679700569939103

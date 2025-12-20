@@ -1,0 +1,16 @@
+phase,cluster_id,action,rationale
+Phase0_AutoFilter,344,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,355,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,365,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,397,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,414,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,456,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,461,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,463,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,475,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,476,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,478,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase1_VLM_Neuronal,31,KEEP,"VLM: Neuronal. The waveform is biphasic with a sharp negative trough and smooth return to baseline, meeting the criteria for a valid neuronal shape.. ISI=0.03%"
+Phase2_Heuristic_Merge,353,DISCARD,Cannot merge: corr=0.664 (<0.3) or merged_isi=12.53% (>0.5%)
+Phase2_Heuristic_Merge,413,DISCARD,Cannot merge: corr=0.819 (<0.3) or merged_isi=13.52% (>0.5%)
+Phase2_Heuristic_Merge,443,DISCARD,Cannot merge: corr=0.898 (<0.3) or merged_isi=12.37% (>0.5%)

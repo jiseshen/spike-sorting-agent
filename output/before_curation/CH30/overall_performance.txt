@@ -1,0 +1,15 @@
+OVERALL PERFORMANCE SUMMARY
+==================================================
+
+n_curated_clusters: 18
+n_matched_clusters: 2
+total_gt_spikes: 91105
+total_tp: 79644
+total_fp: 349679
+total_fn: 11461
+overall_precision: 0.1855
+overall_recall: 0.8742
+overall_f1_score: 0.3061
+mean_precision: 0.0604
+mean_recall: 0.1111
+mean_f1_score: 0.0644

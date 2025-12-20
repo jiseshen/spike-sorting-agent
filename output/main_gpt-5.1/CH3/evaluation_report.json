@@ -1,0 +1,24 @@
+{
+  "overall_performance": {
+    "n_curated_clusters": 2,
+    "n_matched_clusters": 2,
+    "total_gt_spikes": 18364,
+    "total_tp": 18364,
+    "total_fp": 12191,
+    "total_fn": 0,
+    "overall_precision": 0.6010145639011618,
+    "overall_recall": 1.0,
+    "overall_f1_score": 0.7507921257589075,
+    "mean_precision": 0.6141879455344526,
+    "mean_recall": 1.0,
+    "mean_f1_score": 0.708328326380868
+  },
+  "quality_metrics_summary": {
+    "n_clusters": 2,
+    "mean_firing_rate": 5.185940917284862,
+    "mean_isi_violations": 0.017320447105947562,
+    "mean_presence_ratio": 1.0,
+    "mean_amplitude_cv": 0.1891504050894454,
+    "mean_snr": 6.4683803425523525
+  }
+}

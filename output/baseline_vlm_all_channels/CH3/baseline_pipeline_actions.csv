@@ -1,0 +1,25 @@
+phase,cluster_id,action,rationale
+Phase0_AutoFilter,228,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,232,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,243,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,282,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,289,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,296,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,307,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,315,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,320,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,321,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,322,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,323,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,324,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,329,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,331,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,333,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,334,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,335,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,336,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,337,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,339,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase0_AutoFilter,340,DISCARD,Event count is too low for individual clusters at end of hierarchical merging.
+Phase2_Heuristic_Merge,218,DISCARD,Cannot merge: corr=0.588 (<0.3) or merged_isi=24.95% (>0.5%)
+Phase2_Heuristic_Merge,222,DISCARD,Cannot merge: corr=0.782 (<0.3) or merged_isi=26.53% (>0.5%)

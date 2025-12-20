@@ -1,0 +1,4 @@
+method,overall_f1_score,overall_precision,overall_recall,mean_isi_violations,mean_presence_ratio,mean_amplitude_cv,mean_snr
+AMPS-GPT5.1,0.0875,0.1801,0.2122,0.0073,0.0,0.022,2.974
+NoMetrics,0.0708,0.2477,0.2041,0.0179,0.0,0.051,2.6437
+NonReasoning,0.1659,0.3364,0.2047,0.0116,0.0,0.0573,3.3102

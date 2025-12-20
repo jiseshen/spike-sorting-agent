@@ -1,0 +1,25 @@
+[project]
+name = "spikesorting"
+version = "0.1.0"
+description = "Agentic spike sorting with VLM-based curation"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "scipy",
+    "matplotlib",
+    "spikeinterface>=0.103.1",
+    "h5py",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "ipython>=8.0.0",
+    "jupyter>=1.0.0",
+]
+
+[project.scripts]
+agentic-spikesorting = "src.pipeline:main"

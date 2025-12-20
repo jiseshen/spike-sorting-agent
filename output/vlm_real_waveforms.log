@@ -1,0 +1,53 @@
+Loading CH3 data...
+Loaded: 25 units (excludes cluster 0), Fs=30000.0 Hz
+Real data: waveforms=(94743, 45), spike_times=94743, assigns=94743
+
+======================================================================
+VLM-INTEGRATED CURATION PIPELINE
+======================================================================
+
+======================================================================
+PHASE 0: AUTOMATIC SIZE FILTERING
+======================================================================
+[Phase0] DISCARD [228]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [232]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [243]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [282]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [289]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [296]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [307]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [315]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [320]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [321]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [322]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [323]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [324]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [329]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [331]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [333]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [334]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [335]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [336]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [337]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [339]: Event count is too low for individual clusters at end of hierarchical merging.
+[Phase0] DISCARD [340]: Event count is too low for individual clusters at end of hierarchical merging.
+✓ Phase 0 complete: 22 discarded, 3 kept
+
+======================================================================
+PHASE 1A: RULE-BASED SHAPE ASSESSMENT
+======================================================================
+[Phase1A] DISCARD [1]: Invalid shape: Too many phases (4 > 3)
+[Phase1A] DISCARD [218]: Invalid shape: Too broad (peak-to-trough 0.833 ms > 0.6 ms), Large baseline offset (0.41 of peak amplitude)
+[Phase1A] DISCARD [222]: Invalid shape: Too many phases (4 > 3), Large baseline offset (0.40 of peak amplitude)
+✓ Phase 1A complete: 0 valid, 3 invalid
+
+✓ All clusters filtered out in Phase 1A
+
+✓ Action log saved to output/vlm_pipeline_actions_CH3.csv
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+Final clusters: []
+
+✓ Action log saved: output/vlm_pipeline_actions_CH3.csv
