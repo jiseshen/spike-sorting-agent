@@ -9,7 +9,6 @@ spikeinterface>=0.98.0
 
 # VLM API
 openai>=1.0.0
-anthropic>=0.18.0
 
 # Utilities
 tqdm>=4.60.0
