@@ -11,6 +11,8 @@ wheels/
 .venv
 
 data/
+*.mat
+*.csv
 
 output/
 *output/
