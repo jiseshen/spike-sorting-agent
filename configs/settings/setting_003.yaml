@@ -1,0 +1,50 @@
+# Setting 003: High noise, with burst artifacts
+# Teacher style: SNR-only (prioritize amplitude, ignore ISI)
+
+setting_id: setting_003
+
+simulation:
+  n_channels: 20
+  duration: 120
+  n_neurons_range: [5, 12]
+  probe: "Neuronexus-32"
+  seed: 999
+
+noise:
+  level: "high"
+  noise_level: 35.0       # uV RMS
+
+drift:
+  enabled: false
+  drift_velocity: 0.0
+
+overlap:
+  enabled: true
+  max_overlap_pairs: 5
+
+artifact:
+  type: "burst"
+
+teacher_criteria:
+  min_spike_count: 500
+  max_isi_violation_rate: 0.05   # tolerant
+  require_biphasic: false
+  min_snr: 5.0                   # high SNR floor
+  teacher_style: "snr_only"
+
+adaptation:
+  n_train_channels: 12
+  n_eval_channels: 5
+  split_seed: 2
+
+sorter:
+  name: "mountainsort5"
+  detect_threshold: 6.0
+  snippet_T1: 20
+  snippet_T2: 20
+
+hierarchy:
+  enabled: true
+  similarity_metric: "pearson"
+  min_similarity: 0.88
+  max_merges: null

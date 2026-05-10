@@ -6,10 +6,13 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "numpy",
-    "scipy",
+    "scipy<1.14",
     "matplotlib",
     "spikeinterface>=0.103.1",
     "h5py",
+    "neuron<9",
+    "LFPy",
+    "MEArec",
 ]
 
 [project.optional-dependencies]
